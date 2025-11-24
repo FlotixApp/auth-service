@@ -38,7 +38,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /app
 
 # Bring in the compiled binary
-COPY --from=builder /app/target/release/auth /usr/local/bin/auth
+COPY --from=builder /app/target/release/auth-service /usr/local/bin/auth-service
 
 # Minimal runtime env
 ENV RUST_LOG=info \
@@ -46,5 +46,5 @@ ENV RUST_LOG=info \
 EXPOSE 8080
 
 USER appuser
-ENTRYPOINT ["auth"]
+ENTRYPOINT ["auth-service"]
 
