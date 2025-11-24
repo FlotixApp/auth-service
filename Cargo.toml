@@ -4,18 +4,13 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-axum = { version = "0.7", features = ["macros", "json"] }
-hyper = "1"
-tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+actix-web = "4"
+actix-session = "0.7"
+actix-rt = "2"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 dotenvy = "0.15"
 oauth2 = "4"
-openidconnect = "3"
-jsonwebtoken = "9"
-reqwest = { version = "0.12", features = ["rustls-tls"] }
-tower = "0.5"
-tower-sessions = "0.9"
+reqwest = { version = "0.12", features = ["rustls-tls", "json"] }
 rand = "0.8"
-urlencoding = "2.1"
 
